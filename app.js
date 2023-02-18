@@ -1,20 +1,14 @@
-const option = document.querySelector('.option');
-const menu = document.querySelector('#menu');
-const closemenu= document.querySelector('.closemenu');
+// eslint-disable-next-line no-unused-vars
+function showMenu() {
+    document.querySelector('.navigation').classList.toggle('active');
+    document.querySelector('.menu-overlay').classList.toggle('active');
+    document.querySelector('.menu').classList.toggle('active');
+  }
 
-menu.addEventListener('click', show);
-closemenu.addEventListener('click', close);
-
-function show() {
-	option.style.display = 'flex';
-	option.style.top = '0';
-}
-
-menu.addEventListener('click', show);
-
-function close() {
-	option.style.top = '-100%';
-}
-
-closemenu.addEventListener('click', close);
+  // eslint-disable-next-line no-unused-vars
+  function hideMenu() {
+    document.querySelector('.navigation.active').classList.remove('active');
+    document.querySelector('.menu-overlay.active').classList.remove('active');
+    document.querySelector('.menu.active').classList.remove('active');
+  }
 
